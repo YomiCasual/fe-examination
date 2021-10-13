@@ -1,0 +1,57 @@
+.account {
+  display: flex;
+  border-bottom: 1px solid #d5d5d5;
+  gap: 6rem;
+  @include responsive($mobile-l) {
+    flex-wrap: wrap;
+  }
+
+  padding: {
+    top: 6rem;
+    bottom: 6rem;
+  }
+
+  &__image {
+    img {
+      height: 30rem;
+
+      @include responsive($tablet) {
+        height: 19.5rem;
+      }
+
+      @include responsive($mobile-l) {
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    flex: auto;
+    h3 {
+      font-size: 4.4rem;
+      text-transform: uppercase;
+      font-weight: black;
+    }
+
+    .account--form {
+      .form__group {
+        margin-top: 3rem;
+      }
+      .split__form {
+        display: flex;
+        gap: 3rem;
+
+        & > .form__group:first-child {
+          width: 45%;
+        }
+
+        @include responsive($tablet) {
+          flex-wrap: wrap;
+          gap: 0rem;
+          & > .form__group:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

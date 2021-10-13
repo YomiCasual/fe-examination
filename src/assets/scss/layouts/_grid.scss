@@ -1,0 +1,9 @@
+.center {
+	max-width: $container-width;
+	margin: 0 auto;
+
+	@include responsive($desktop-l) {
+		padding-left: 1.7rem;
+		padding-right: 1.7rem;
+	}
+}
